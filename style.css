@@ -36,10 +36,17 @@
     grid-area: main;
 }
 
-.logo {
+.logo-container {
     display: grid;
+    align-items: center;
+    justify-content: center;
 }
 
-.logo h1 {
+.logo {
+    display: grid;
+    grid-auto-flow: dense;
+}
+
+#title-text {
     display: inline;
 }
