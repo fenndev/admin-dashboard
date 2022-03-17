@@ -35,18 +35,3 @@
 .site-content {
     grid-area: main;
 }
-
-.logo-container {
-    display: grid;
-    align-items: center;
-    justify-content: center;
-}
-
-.logo {
-    display: grid;
-    grid-auto-flow: dense;
-}
-
-#title-text {
-    display: inline;
-}
