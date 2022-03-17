@@ -25,7 +25,110 @@
     grid-area: sidebar;
     display: grid;
     grid-template-rows: repeat(10, 1fr);
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+        "logo logo-text ."
+        "icon1 nav-text1 ."
+        "icon2 nav-text2 ."
+        "icon3 nav-text3 ."
+        "icon4 nav-text4 ."
+        "icon5 nav-text5 ."
+        "icon6 nav-text6 ."
+        "icon7 nav-text7 ."
+        "icon8 nav-text8 ."
+        "icon9 nav-text9 ."
+    ;
+    column-gap: 3rem;
+}
+
+.nav-text {
+    align-self: center;
+}
+
+.logo-text {
+    grid-area: logo-text;
+}
+
+.nav-text1 {
+    grid-area: nav-text1;
+}
+
+.nav-text2 {
+    grid-area: nav-text2;
+}
+
+.nav-text3 {
+    grid-area: nav-text3;
+}
+
+.nav-text4 {
+    grid-area: nav-text4;
+}
+
+.nav-text5 {
+    grid-area: nav-text5;
+}
+
+.nav-text6 {
+    grid-area: nav-text6;
+}
+
+.nav-text7 {
+    grid-area: nav-text7;
+}
+
+.nav-text8 {
+    grid-area: nav-text8;
+}
+
+.nav-text9 {
+    grid-area: nav-text9;
+}
+
+
+.logo-icon {
+    grid-area: logo;
+}
+
+.icon1 {
+    grid-area: icon1;
+}
+
+.icon2 {
+    grid-area: icon2;
+}
+
+.icon3 {
+    grid-area: icon3;
+}
+
+.icon4 {
+    grid-area: icon4;
+}
+
+.icon5 {
+    grid-area: icon5;
+}
+
+.icon6 {
+    grid-area: icon6;
+}
+
+.icon7 {
+    grid-area: icon7;
+}
+
+.icon8 {
+    grid-area: icon8;
+}
+
+.icon9 {
+    grid-area: icon9;
+}
+
+.icon {
+    align-self: center;
+    justify-self: end;
 }
 
 .site-header {
@@ -34,4 +137,8 @@
 
 .site-content {
     grid-area: main;
+}
+
+.nav-text {
+    display: inline;
 }
