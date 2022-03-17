@@ -19,6 +19,8 @@
         "sidebar main"
 }
 
+/* Sidebar */
+
 .sidebar {
     grid-area: sidebar;
     display: grid;
@@ -44,9 +46,48 @@
     font-size: 2.4rem;
 }
 
+/* Header */
+
 .site-header {
     grid-area: header;
+    display: grid;
+    grid-template: repeat(2, 1fr) / 2fr 1fr;
+    grid-template-areas: 
+        "search account"
+        "greet action"
+    ;
 }
+
+.search-box {
+    grid-area: search;
+    display: flex;
+    align-items: center;
+}
+
+.search-field {
+    padding-left: 1.2rem;
+    width: 65%;
+    height: 2.4rem;
+    border-radius: 2rem;
+    border: none;
+    background-color: lightgray;
+}
+
+.account-box {
+    grid-area: account;
+}
+
+.greet-box {
+    grid-area: greet;
+}
+
+.action-box {
+    grid-area: action;
+}
+
+
+
+/* Main Content */
 
 .site-content {
     grid-area: main;
