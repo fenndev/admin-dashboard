@@ -4,17 +4,15 @@
     box-sizing: border-box;
 }
 
-:root {
+html {
     font-size: 62.5%;
+    
 }
 
 .container {
     height: 100vh;
-    width: 100vw;
-    overflow: hidden;
     background-color: gray;
     display: grid;
-    grid-template: 1fr 5fr / 1fr 7fr;
     grid-template-areas: 
         "sidebar header"
         "sidebar main";
@@ -23,10 +21,10 @@
 /* Sidebar */
 
 .sidebar {
+    max-height: 100vh;
     grid-area: sidebar;
     display: grid;
-    grid-template-rows: repeat(20, 1fr);
-    grid-template-columns: 1fr;
+    grid-template-rows: repeat(12, 1fr);
     background-color: blue;
 }
 
@@ -130,16 +128,12 @@
 /* Main Content */
 
 .site-content {
-    padding: 5rem 10rem;
     grid-area: main;
     display: grid;
-    grid-template: repeat(3, 1fr) / 4fr 1fr;
+    grid-template-columns: 3fr 1fr;
     grid-template-areas: 
         "project side-section"
-        "project side-section"
-        "project side-section"
     ;
-    background-color: gray;
 }
 
 .project-container {
@@ -195,18 +189,25 @@
 .news-container {
     grid-area: side-section;
     display: grid;
-    grid-template-rows: 1fr 1fr;
-    justify-content: space-between;
-    
-} 
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+        "announcements"
+        "trending"
+        "."
+    ;
+}
+
+.announcements-container {
+    display: flex;
+    flex-direction: column;
+    grid-area: announcements;
+}
 
 .announcements-card {
-    height: 80%;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    padding: 0 2rem;
     background-color: white;
 }
 
@@ -228,18 +229,13 @@
 }
 
 .trending-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    padding: 0 2rem;
+    grid-area: trending;
 }
 
 .trending-card {
-    background-color: white;
-}
-
-.trending-card--section {
+    width: 100%;
     display: flex;
-    align-items: center;
-    gap: 1.2rem;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: white;
 }
