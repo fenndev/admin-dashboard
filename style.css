@@ -16,7 +16,7 @@ body {
 .container {
     height: 100%;
     width: 100%;
-    background-color: gray;
+    background-color: lightgray;
     display: grid;
     grid-template-areas: 
         "sidebar header"
@@ -30,7 +30,7 @@ body {
     display: grid;
     grid-template-rows: repeat(20, minmax(0, 1fr));
     grid-template-columns: minmax(0, 1fr);
-    background-color: blue;
+    background-color: cadetblue;
 }
 
 .nav-item {
@@ -144,7 +144,7 @@ body {
     ;
     max-height: 100%;
     min-height: 0;
-    padding: 0 10rem;
+    padding: 2rem 6rem;
 }
 
 .project-container {
@@ -178,7 +178,10 @@ body {
     align-items: center;
     width: 50rem;
     background-color: white;
-    margin: 0 2rem;
+}
+
+.project-card, .announcements-card, .trending-card {
+    border-radius: 1rem;
 }
 
 .card-title, .card-content, .action-icon-container {
@@ -204,14 +207,14 @@ body {
 .news-container {
     grid-area: side-section;
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
     grid-template-areas: 
         "announcements"
         "trending"
-        "."
     ;
     max-height: 100%;
     min-height: 0;
+    gap: 2rem;
 }
 
 .announcements-container {
@@ -221,11 +224,19 @@ body {
 }
 
 .announcements-card {
+    height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     background-color: white;
+    padding: 0 4rem;
+}
+
+.announcements-card--section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .announcements-card--section h4 {
@@ -247,6 +258,9 @@ body {
 
 .trending-container {
     grid-area: trending;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .trending-card {
@@ -255,4 +269,13 @@ body {
     flex-direction: column;
     justify-content: space-evenly;
     background-color: white;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.trending-card--section {
+    display: flex;
+    width: 50%;
+    margin: 0 auto;
+    gap: 2rem;
 }
