@@ -17,6 +17,6 @@
         justify-content: space-evenly;
         background-color: white;
         align-items: center;
-        flex-grow: 1;
+        border-radius: 1rem;
     }
 </style>

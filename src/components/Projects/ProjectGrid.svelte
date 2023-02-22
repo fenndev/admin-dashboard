@@ -9,11 +9,6 @@
 <div class="project-grid">
     <ProjectCard {title} {content} />
     <ProjectCard {title} {content} />
-    <ProjectCard {title} {content} />
-    <ProjectCard {title} {content} />
-    <ProjectCard {title} {content} />
-    <ProjectCard {title} {content} />
-    <ProjectCard {title} {content} />
 </div>
 
 <style>

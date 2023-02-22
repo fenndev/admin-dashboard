@@ -19,4 +19,10 @@
         gap: 2rem;
         padding: 2rem 6rem;
     }
+
+    aside {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
 </style>
